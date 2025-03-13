@@ -200,8 +200,8 @@ export default function Home() {
                     Can I get a refund if I relapse?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-700">
-                    Yes, we offer a 30-day money-back guarantee. We're here to support your journey, not profit from
-                    setbacks. If you're struggling, we encourage you to reach out to our support team who can help you
+                    Yes, we offer a 30-day money-back guarantee. We&apos;re here to support your journey, not profit from
+                    setbacks. If you&apos;re struggling, we encourage you to reach out to our support team who can help you
                     get back on track.
                   </AccordionContent>
                 </AccordionItem>
@@ -211,7 +211,7 @@ export default function Home() {
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-700">
                     You can cancel your subscription at any time through the app settings or by contacting our support
-                    team. There are no cancellation fees, and you'll continue to have access until the end of your
+                    team. There are no cancellation fees, and you&apos;ll continue to have access until the end of your
                     billing period.
                   </AccordionContent>
                 </AccordionItem>
