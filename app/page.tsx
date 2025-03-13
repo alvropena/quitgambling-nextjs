@@ -1,113 +1,275 @@
-import Image from 'next/image'
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Shield, BarChart, Clock, ChevronRight, Download, Github, Instagram } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex min-h-screen flex-col bg-red-50">
+      <header className="sticky top-0 z-50 border-b bg-red-50/80 backdrop-blur-md">
+        <div className="container mx-auto max-w-6xl flex h-16 items-center justify-between px-4 md:px-6">
+          <Link href="/" className="flex items-center gap-2 font-semibold text-black">
+            <Shield className="h-6 w-6 text-red-600" />
+            <span>QuitGambling</span>
+          </Link>
+          <nav className="hidden md:flex gap-6">
+            <Link
+              href="#features"
+              className="text-sm font-medium text-black hover:text-red-600 hover:underline underline-offset-4"
+            >
+              Features
+            </Link>
+            <Link
+              href="#pricing"
+              className="text-sm font-medium text-black hover:text-red-600 hover:underline underline-offset-4"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#faq"
+              className="text-sm font-medium text-black hover:text-red-600 hover:underline underline-offset-4"
+            >
+              FAQ
+            </Link>
+          </nav>
+          <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+            <Download className="mr-2 h-4 w-4" />
+            Download
+          </Button>
         </div>
-      </div>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter text-black sm:text-4xl md:text-5xl lg:text-6xl">
+                  Break free from gambling addiction
+                </h1>
+                <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl">
+                  QuitGambling helps you overcome gambling addiction with powerful tools and support.
+                </p>
+              </div>
+              <div className="space-x-4">
+                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download App
+                </Button>
+                <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section id="features" className="w-full py-12 md:py-24 bg-white/50">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter text-black md:text-4xl">Key Features</h2>
+                <p className="mx-auto max-w-[700px] text-gray-700">
+                  Simple tools to help you break free from gambling addiction.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 md:grid-cols-3">
+              <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
+                <Clock className="h-12 w-12 text-red-600" />
+                <h3 className="text-xl font-bold text-black">Sobriety Tracker</h3>
+                <p className="text-sm text-gray-700 text-center">
+                  Track your gambling-free days and celebrate milestones.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
+                <BarChart className="h-12 w-12 text-red-600" />
+                <h3 className="text-xl font-bold text-black">Trigger Analysis</h3>
+                <p className="text-sm text-gray-700 text-center">Identify and understand your gambling triggers.</p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
+                <Shield className="h-12 w-12 text-red-600" />
+                <h3 className="text-xl font-bold text-black">Blocking Tools</h3>
+                <p className="text-sm text-gray-700 text-center">Block gambling sites and apps to prevent relapse.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+        <section id="pricing" className="w-full py-12 md:py-24">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter text-black md:text-4xl">Simple Pricing</h2>
+                <p className="mx-auto max-w-[700px] text-gray-700">Choose the plan that works for you.</p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-start gap-8 sm:max-w-none sm:grid-cols-2 md:gap-12 lg:grid-cols-2">
+              <div className="flex flex-col justify-between rounded-lg border bg-white p-6 shadow-sm">
+                <div>
+                  <h3 className="text-xl font-bold text-black">Monthly</h3>
+                  <div className="mt-4 text-3xl font-bold text-black">$9.99</div>
+                  <p className="mt-1 text-sm text-gray-700">Billed monthly</p>
+                  <ul className="mt-4 space-y-2 text-sm">
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      Full access to all features
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      24/7 support
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      Community access
+                    </li>
+                  </ul>
+                </div>
+                <Button
+                  className="mt-6 bg-white border-red-600 text-red-600 hover:bg-red-50"
+                  variant="outline"
+                >
+                  Subscribe Monthly
+                </Button>
+              </div>
+              <div className="flex flex-col justify-between rounded-lg border bg-white p-6 shadow-md">
+                <div>
+                  <h3 className="text-xl font-bold text-black">Annual</h3>
+                  <div className="mt-4 text-3xl font-bold text-black">$89.99</div>
+                  <p className="mt-1 text-sm text-gray-700">$7.50/month, billed annually</p>
+                  <ul className="mt-4 space-y-2 text-sm">
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      Full access to all features
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      24/7 priority support
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      Community access
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <ChevronRight className="mr-2 h-4 w-4 text-red-600" />
+                      Save 25% compared to monthly
+                    </li>
+                  </ul>
+                </div>
+                <Button className="mt-6 bg-red-600 hover:bg-red-700 text-white">Subscribe Annually</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="w-full py-12 md:py-24 bg-white/50">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter text-black md:text-4xl">
+                  Frequently Asked Questions
+                </h2>
+                <p className="mx-auto max-w-[700px] text-gray-700">
+                  Find answers to common questions about quitgambling.app.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-3xl py-8">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
+                    How does quitgambling.app help with gambling addiction?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700">
+                    quitgambling.app combines blocking technology, behavioral tracking, and community support to help you
+                    overcome gambling addiction and maintain sobriety. Our app provides tools to identify triggers,
+                    track your progress, and connect with others on the same journey.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
+                    Is my data private?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700">
+                    Yes, we take privacy seriously. Your data is encrypted and never shared with third parties without
+                    your explicit consent. We understand the sensitive nature of recovery and ensure your information
+                    remains confidential.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
+                    Can I get a refund if I relapse?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700">
+                    Yes, we offer a 30-day money-back guarantee. We're here to support your journey, not profit from
+                    setbacks. If you're struggling, we encourage you to reach out to our support team who can help you
+                    get back on track.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
+                    How do I cancel my subscription?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-700">
+                    You can cancel your subscription at any time through the app settings or by contacting our support
+                    team. There are no cancellation fees, and you'll continue to have access until the end of your
+                    billing period.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24 bg-red-600 text-white">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">Ready to Take Control?</h2>
+              <p className="mx-auto max-w-[600px] text-xl text-white/90">
+                Start your journey to a gambling-free life today.
+              </p>
+              <Button size="lg" className="mt-6 bg-white text-red-600 hover:bg-white/90">
+                <Download className="mr-2 h-5 w-5" />
+                Download Now
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="border-t py-6 md:py-8 bg-white">
+        <div className="container mx-auto max-w-6xl flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
+          <div className="flex items-center gap-2">
+            <Shield className="h-5 w-5 text-red-600" />
+            <span className="text-sm font-medium text-black">QuitGambling</span>
+          </div>
+          <p className="text-center text-sm text-gray-700 md:text-left">
+            © {new Date().getFullYear()} Latino Excellence LLC. All rights reserved.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <div className="flex gap-4 items-center">
+            <Link href="/blog" className="text-sm text-gray-700 hover:text-red-600 hover:underline">
+              Blog
+            </Link>
+            <Link href="/support" className="text-sm text-gray-700 hover:text-red-600 hover:underline">
+              Support
+            </Link>
+            <Link href="/privacy" className="text-sm text-gray-700 hover:text-red-600 hover:underline">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-sm text-gray-700 hover:text-red-600 hover:underline">
+              Terms
+            </Link>
+            <Link href="https://github.com/quitgambling" className="text-gray-700 hover:text-red-600">
+              <Github className="h-5 w-5" />
+            </Link>
+            <Link href="https://instagram.com/quitgambling.app" className="text-gray-700 hover:text-red-600">
+              <Instagram className="h-5 w-5" />
+            </Link>
+            <Link href="https://tiktok.com/@quitgambling.app" className="text-gray-700 hover:text-red-600">
+              
+            </Link>
+          </div>
+        </div>
+      </footer>
+    </div>
   )
 }
+
