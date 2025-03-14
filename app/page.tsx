@@ -1,6 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Shield, BarChart, Clock, ChevronRight, Download, Github, Instagram } from "lucide-react"
+import { BarChart, Clock, ChevronRight, Download, Github, Instagram } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b bg-red-50/80 backdrop-blur-md">
         <div className="container mx-auto max-w-6xl flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-2 font-semibold text-black">
-            <Shield className="h-6 w-6 text-red-600" />
+            <Image src="/logo.svg" alt="QuitGambling Logo" width={24} height={24} className="h-6 w-6" />
             <span>QuitGambling</span>
           </Link>
           <nav className="hidden md:flex gap-6">
@@ -87,7 +88,7 @@ export default function Home() {
                 <p className="text-sm text-gray-700 text-center">Identify and understand your gambling triggers.</p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-white shadow-sm">
-                <Shield className="h-12 w-12 text-red-600" />
+                <Image src="/logo.svg" alt="QuitGambling Logo" width={48} height={48} className="h-12 w-12" />
                 <h3 className="text-xl font-bold text-black">Blocking Tools</h3>
                 <p className="text-sm text-gray-700 text-center">Block gambling sites and apps to prevent relapse.</p>
               </div>
@@ -177,10 +178,10 @@ export default function Home() {
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className="border-b border-gray-200">
                   <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
-                    How does quitgambling.app help with gambling addiction?
+                    How does QuitGambling help with gambling addiction?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-700">
-                    quitgambling.app combines blocking technology, behavioral tracking, and community support to help you
+                    QuitGambling combines blocking technology, behavioral tracking, and community support to help you
                     overcome gambling addiction and maintain sobriety. Our app provides tools to identify triggers,
                     track your progress, and connect with others on the same journey.
                   </AccordionContent>
@@ -194,17 +195,7 @@ export default function Home() {
                     your explicit consent. We understand the sensitive nature of recovery and ensure your information
                     remains confidential.
                   </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
-                    Can I get a refund if I relapse?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-700">
-                    Yes, we offer a 30-day money-back guarantee. We&apos;re here to support your journey, not profit from
-                    setbacks. If you&apos;re struggling, we encourage you to reach out to our support team who can help you
-                    get back on track.
-                  </AccordionContent>
-                </AccordionItem>
+                </AccordionItem>                
                 <AccordionItem value="item-4" className="border-b border-gray-200">
                   <AccordionTrigger className="text-lg font-medium text-black hover:text-red-600">
                     How do I cancel my subscription?
@@ -227,8 +218,8 @@ export default function Home() {
               <p className="mx-auto max-w-[600px] text-xl text-white/90">
                 Start your journey to a gambling-free life today.
               </p>
-              <Button size="lg" className="mt-6 bg-white text-red-600 hover:bg-white/90">
-                <Download className="mr-2 h-5 w-5" />
+              <Button size="lg" className="mt-6 bg-white text-red-600 hover:bg-white/90 text-lg px-8 py-6 h-auto font-bold shadow-lg transform transition-transform hover:scale-105">
+                <Download className="mr-3 h-6 w-6" />
                 Download Now
               </Button>
             </div>
@@ -238,7 +229,7 @@ export default function Home() {
       <footer className="border-t py-6 md:py-8 bg-white">
         <div className="container mx-auto max-w-6xl flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-6">
           <div className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-red-600" />
+            <Image src="/logo.svg" alt="QuitGambling Logo" width={20} height={20} className="h-5 w-5" />
             <span className="text-sm font-medium text-black">QuitGambling</span>
           </div>
           <p className="text-center text-sm text-gray-700 md:text-left">
