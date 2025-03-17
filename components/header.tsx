@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import { Button } from "./ui/button";
+import { Download } from "lucide-react";
 export function Header() {
 	return (
 		<header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b">
@@ -9,14 +10,14 @@ export function Header() {
 						QuitGambling
 					</Link>
 					<div className="space-x-6">
+						<Link href="/pricing" className="text-gray-600 hover:text-red-600">
+							Pricing
+						</Link>
 						<Link
 							href="/#features"
 							className="text-gray-600 hover:text-red-600"
 						>
 							Features
-						</Link>
-						<Link href="/#pricing" className="text-gray-600 hover:text-red-600">
-							Pricing
 						</Link>
 						<Link href="/#faq" className="text-gray-600 hover:text-red-600">
 							FAQ
@@ -25,6 +26,10 @@ export function Header() {
 							Blog
 						</Link>
 					</div>
+					<Button>
+						<Download className="mr-2 h-4 w-4" />
+						Download
+					</Button>
 				</nav>
 			</div>
 		</header>
