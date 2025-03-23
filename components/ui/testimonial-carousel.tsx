@@ -34,7 +34,7 @@ export function TestimonialCarousel({
 						Real <span className="text-primary">recovery</span> stories
 					</h2>
 					<p className="text-xl text-muted-foreground mb-12">
-						Join thousands who have transformed their lives with QUITTR
+						Join thousands who have transformed their lives with QuitGambling
 					</p>
 				</div>
 

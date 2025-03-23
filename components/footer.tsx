@@ -59,79 +59,67 @@ const InstagramIcon = () => (
 
 export function Footer() {
 	return (
-		<footer className="bg-black text-white py-16">
+		<footer className="bg-black text-white pt-16 pb-8">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
-				<div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-12 gap-8">
 					{/* Contact Column */}
-					<div className="space-y-4">
+					<div className="space-y-4 md:col-span-2">
+						<h3 className="font-semibold mb-6">Contact</h3>
 						<Link href="/contact" className="block hover:text-gray-300">
-							Email Us
+							Support
 						</Link>
 						<Link href="/contact" className="block hover:text-gray-300">
-							Text Us
+							Help Center
+						</Link>
+						<Link href="/contact" className="block hover:text-gray-300">
+							Emergency Help
 						</Link>
 					</div>
 
-					{/* Features Column 1 */}
-					<div className="space-y-4">
-						<Link href="/#features" className="block hover:text-gray-300">
-							Features
+					{/* Resources Column */}
+					<div className="space-y-4 md:col-span-2">
+						<h3 className="font-semibold mb-6">Resources</h3>
+						<Link href="/blog" className="block hover:text-gray-300">
+							Recovery Blog
 						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
+						<Link href="/stories" className="block hover:text-gray-300">
+							Success Stories
 						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
+						<Link href="/guides" className="block hover:text-gray-300">
+							Recovery Guides
 						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
-						</Link>
-					</div>
-
-					{/* Features Column 2 */}
-					<div className="space-y-4">
-						<Link href="/#features" className="block hover:text-gray-300">
-							Features
-						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
-						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
-						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
+						<Link href="/about" className="block hover:text-gray-300">
+							About Us
 						</Link>
 					</div>
 
-					{/* Features Column 3 */}
-					<div className="space-y-4">
+					{/* Features Column */}
+					<div className="space-y-4 md:col-span-2">
+						<h3 className="font-semibold mb-6">Features</h3>
 						<Link href="/#features" className="block hover:text-gray-300">
-							Features
+							Blocking Tools
 						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
+						<Link href="/#features" className="block hover:text-gray-300">
+							Progress Tracking
 						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
-						</Link>
-						<Link href="/faq" className="block hover:text-gray-300">
-							FAQs
+						<Link href="/#features" className="block hover:text-gray-300">
+							Community Support
 						</Link>
 					</div>
 
 					{/* Newsletter Signup */}
-					<div className="space-y-4">
-						<h3 className="text-lg font-semibold">
-							Sign Up for Our Newsletter
-						</h3>
+					<div className="space-y-4 md:col-span-4 md:col-start-9">
+						<h3 className="text-lg font-semibold">Stay Updated</h3>
+						<p className="text-sm text-gray-400">
+							Get recovery tips and updates straight to your inbox.
+						</p>
 						<Input
 							type="email"
 							placeholder="Enter your email"
 							className="bg-transparent border-white/20"
 						/>
 						<p className="text-sm text-gray-400">
-							By signing up, you agree to QUITTR&apos;s{" "}
+							By signing up, you agree to QuitGambling&apos;s{" "}
 							<Link href="/privacy" className="underline hover:text-white">
 								Privacy Policy
 							</Link>{" "}
@@ -144,11 +132,11 @@ export function Footer() {
 				</div>
 
 				{/* Bottom Section */}
-				<div className="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-white/20">
+				<div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-white/20">
 					<p className="text-sm text-gray-400">
-						© {new Date().getFullYear()} QUITTR LLC
+						© {new Date().getFullYear()} QuitGambling LLC
 					</p>
-					<div className="flex items-center gap-4 mt-4 md:mt-0">
+					<div className="flex items-center gap-4 md:mt-0">
 						<Link
 							href="/privacy"
 							className="text-sm text-gray-400 hover:text-white"
@@ -163,7 +151,7 @@ export function Footer() {
 							Terms of Service
 						</Link>
 					</div>
-					<div className="flex gap-6 mt-4 md:mt-0">
+					<div className="flex gap-6 md:mt-0">
 						<Link
 							href="https://instagram.com/quitgambling.app"
 							className="text-gray-400 hover:text-white"

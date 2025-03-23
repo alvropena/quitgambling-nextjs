@@ -27,7 +27,7 @@ export default function SupportPage() {
 						Having issues with the app? Our technical support team is available:
 					</p>
 					<ul>
-						<li>Email: support@quittr.com</li>
+						<li>Email: support@quitgambling.app</li>
 						<li>Response time: Within 24 hours</li>
 					</ul>
 
@@ -37,7 +37,7 @@ export default function SupportPage() {
 						<a href="/faq" className="text-primary hover:underline">
 							FAQ page
 						</a>{" "}
-						for answers to common questions about using QUITTR.
+						for answers to common questions about using QuitGambling.
 					</p>
 
 					<h2>Community Support</h2>

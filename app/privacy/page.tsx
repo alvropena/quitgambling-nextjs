@@ -10,8 +10,8 @@ export default function PrivacyPage() {
 					<h2>1. Information We Collect</h2>
 					<p>
 						We collect information that you provide directly to us when using
-						the QUITTR app. This may include personal information such as your
-						name, email address, and usage data to help track your recovery
+						the QuitGambling app. This may include personal information such as
+						your name, email address, and usage data to help track your recovery
 						progress.
 					</p>
 
