@@ -1,14 +1,16 @@
 import Link from "next/link";
+import { Input } from "./ui/input";
+import { Instagram, Facebook } from "lucide-react";
 
 // Custom social media icon components
-const TikTokIcon = () => (
+const TikTokIcon = ({ className }: { className?: string }) => (
 	<svg
 		width="20"
 		height="20"
 		viewBox="0 0 24 24"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
-		className="h-5 w-5"
+		className={className}
 		aria-label="TikTok"
 	>
 		<title>TikTok</title>
@@ -57,66 +59,134 @@ const InstagramIcon = () => (
 
 export function Footer() {
 	return (
-		<footer className="border-t py-6 bg-white">
-			<div className="container mx-auto max-w-6xl px-4 md:px-6">
-				<div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
-					<div className="flex flex-col items-center md:items-start gap-2">
-						<p className="text-sm text-gray-700 text-center md:text-left">
-							© {new Date().getFullYear()} Latino Excellence LLC.
+		<footer className="bg-black text-white py-16">
+			<div className="container mx-auto max-w-7xl px-4 md:px-6">
+				<div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+					{/* Contact Column */}
+					<div className="space-y-4">
+						<Link href="/contact" className="block hover:text-gray-300">
+							Email Us
+						</Link>
+						<Link href="/contact" className="block hover:text-gray-300">
+							Text Us
+						</Link>
+					</div>
+
+					{/* Features Column 1 */}
+					<div className="space-y-4">
+						<Link href="/#features" className="block hover:text-gray-300">
+							Features
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+					</div>
+
+					{/* Features Column 2 */}
+					<div className="space-y-4">
+						<Link href="/#features" className="block hover:text-gray-300">
+							Features
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+					</div>
+
+					{/* Features Column 3 */}
+					<div className="space-y-4">
+						<Link href="/#features" className="block hover:text-gray-300">
+							Features
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+						<Link href="/faq" className="block hover:text-gray-300">
+							FAQs
+						</Link>
+					</div>
+
+					{/* Newsletter Signup */}
+					<div className="space-y-4">
+						<h3 className="text-lg font-semibold">
+							Sign Up for Our Newsletter
+						</h3>
+						<Input
+							type="email"
+							placeholder="Enter your email"
+							className="bg-transparent border-white/20"
+						/>
+						<p className="text-sm text-gray-400">
+							By signing up, you agree to QUITTR&apos;s{" "}
+							<Link href="/privacy" className="underline hover:text-white">
+								Privacy Policy
+							</Link>{" "}
+							and{" "}
+							<Link href="/terms" className="underline hover:text-white">
+								Terms of Service
+							</Link>
 						</p>
 					</div>
+				</div>
 
-					<div className="flex flex-wrap justify-center gap-6 items-center">
-						<Link
-							href="/support"
-							className="text-sm text-gray-700 hover:text-red-600"
-						>
-							Support
-						</Link>
+				{/* Bottom Section */}
+				<div className="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-white/20">
+					<p className="text-sm text-gray-400">
+						© {new Date().getFullYear()} QUITTR LLC
+					</p>
+					<div className="flex items-center gap-4 mt-4 md:mt-0">
 						<Link
 							href="/privacy"
-							className="text-sm text-gray-700 hover:text-red-600"
+							className="text-sm text-gray-400 hover:text-white"
 						>
-							Privacy
+							Privacy Policy
 						</Link>
+						<span className="text-gray-400">|</span>
 						<Link
 							href="/terms"
-							className="text-sm text-gray-700 hover:text-red-600"
+							className="text-sm text-gray-400 hover:text-white"
 						>
-							Terms
-						</Link>
-						<Link
-							href="/blog"
-							className="text-sm text-gray-700 hover:text-red-600"
-						>
-							Blog
+							Terms of Service
 						</Link>
 					</div>
-
-					<div className="flex gap-8 items-center justify-center">
-						<Link
-							href="https://github.com/alvropena/quitgambling"
-							className="text-gray-700 hover:text-red-600 p-2"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<GitHubIcon />
-						</Link>
+					<div className="flex gap-6 mt-4 md:mt-0">
 						<Link
 							href="https://instagram.com/quitgambling.app"
-							className="text-gray-700 hover:text-red-600 p-2"
+							className="text-gray-400 hover:text-white"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<InstagramIcon />
+							<Instagram className="h-5 w-5" />
 						</Link>
 						<Link
 							href="https://tiktok.com/@quitgambling.app"
-							className="text-gray-700 hover:text-red-600 p-2"
+							className="text-gray-400 hover:text-white"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<TikTokIcon />
+							<TikTokIcon className="h-5 w-5" />
+						</Link>
+						<Link
+							href="https://facebook.com/quitgambling.app"
+							className="text-gray-400 hover:text-white"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Facebook className="h-5 w-5" />
 						</Link>
 					</div>
 				</div>
