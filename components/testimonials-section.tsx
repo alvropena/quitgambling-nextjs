@@ -37,7 +37,7 @@ export function TestimonialsSection() {
 								<div className="text-left">
 									<div className="font-semibold">{testimonial.author}</div>
 									<div className="text-sm text-muted-foreground">
-										{testimonial.role}
+										{testimonial.days} days gambling-free
 									</div>
 								</div>
 							</div>
