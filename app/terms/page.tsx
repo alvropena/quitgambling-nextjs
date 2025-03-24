@@ -4,8 +4,8 @@ export default function TermsPage() {
 			<div className="space-y-8">
 				<h1 className="text-4xl font-bold tracking-tight">Terms of Service</h1>
 
-				<div className="prose prose-lg max-w-none">
-					<p>Last updated: March 23, 2024</p>
+				<div className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-headings:text-foreground">
+					<p>Last updated: March 23, 2025</p>
 
 					<h2>1. Acceptance of Terms</h2>
 					<p>
