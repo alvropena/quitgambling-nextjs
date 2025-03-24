@@ -2,11 +2,14 @@ export default function TermsPage() {
 	return (
 		<div className="container mx-auto max-w-6xl px-4 md:px-6 pt-32 pb-16">
 			<div className="space-y-8">
-				<h1 className="text-4xl font-bold tracking-tight">Terms of Service</h1>
+				<div className="text-center">
+					<h1 className="text-4xl font-bold tracking-tight mb-2">
+						Terms of Service
+					</h1>
+					<p className="text-muted-foreground">Last updated: March 23, 2025</p>
+				</div>
 
 				<div className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-headings:text-foreground">
-					<p>Last updated: March 23, 2025</p>
-
 					<h2>1. Acceptance of Terms</h2>
 					<p>
 						By accessing and using QuitGambling&apos;s services, you agree to be

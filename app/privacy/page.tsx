@@ -2,11 +2,14 @@ export default function PrivacyPage() {
 	return (
 		<div className="container mx-auto max-w-6xl px-4 md:px-6 pt-32 pb-16">
 			<div className="space-y-8">
-				<h1 className="text-4xl font-bold tracking-tight">Privacy Policy</h1>
+				<div className="text-center">
+					<h1 className="text-4xl font-bold tracking-tight mb-2">
+						Privacy Policy
+					</h1>
+					<p className="text-muted-foreground">Last updated: March 23, 2025</p>
+				</div>
 
 				<div className="prose prose-lg max-w-none prose-p:text-muted-foreground prose-headings:text-foreground">
-					<p>Last updated: March 23, 2025</p>
-
 					<h2>1. Information We Collect</h2>
 					<p>
 						We collect information that you provide directly to us when using

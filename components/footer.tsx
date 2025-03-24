@@ -64,10 +64,12 @@ export function Footer() {
 	return (
 		<footer className="w-full pt-12 md:pt-16 pb-8 bg-muted/50 dark:bg-muted/10 border-t border-border/10">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
-				<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-12 gap-8">
+				<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-12 gap-4 md:gap-8">
 					{/* Contact Column */}
-					<div className="space-y-4 md:col-span-2">
-						<h3 className="font-semibold mb-4 md:mb-6">Contact</h3>
+					<div className="space-y-2 md:space-y-4 md:col-span-2">
+						<h3 className="font-semibold text-sm md:text-base mb-2 md:mb-6">
+							Contact
+						</h3>
 						<Link
 							href="/contact"
 							className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -89,8 +91,10 @@ export function Footer() {
 					</div>
 
 					{/* Resources Column */}
-					<div className="space-y-4 md:col-span-2">
-						<h3 className="font-semibold mb-4 md:mb-6">Resources</h3>
+					<div className="space-y-2 md:space-y-4 md:col-span-2">
+						<h3 className="font-semibold text-sm md:text-base mb-2 md:mb-6">
+							Resources
+						</h3>
 						<Link
 							href="/blog"
 							className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -118,8 +122,10 @@ export function Footer() {
 					</div>
 
 					{/* Features Column */}
-					<div className="space-y-4 md:col-span-2">
-						<h3 className="font-semibold mb-4 md:mb-6">Features</h3>
+					<div className="space-y-2 md:space-y-4 md:col-span-2">
+						<h3 className="font-semibold text-sm md:text-base mb-2 md:mb-6">
+							Features
+						</h3>
 						<Link
 							href="/#features"
 							className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -141,7 +147,7 @@ export function Footer() {
 					</div>
 
 					{/* Newsletter Signup */}
-					<div className="space-y-4 col-span-2 sm:col-span-4 md:col-span-4 md:col-start-9">
+					<div className="space-y-4 col-span-3 sm:col-span-4 md:col-span-4 md:col-start-9">
 						<Card className="bg-background/50 border-border/50">
 							<CardHeader className="pb-2">
 								<CardTitle className="text-lg">Stay Updated</CardTitle>
@@ -209,7 +215,7 @@ export function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Instagram className="h-5 w-5" />
+							<Instagram className="h-5 w-5" aria-label="Instagram" />
 						</Link>
 						<Link
 							href="https://tiktok.com/@quitgambling.app"
@@ -217,7 +223,7 @@ export function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<TikTokIcon className="h-5 w-5" />
+							<TikTokIcon className="h-5 w-5" aria-label="TikTok" />
 						</Link>
 						<Link
 							href="https://facebook.com/quitgambling.app"
@@ -225,7 +231,7 @@ export function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Facebook className="h-5 w-5" />
+							<Facebook className="h-5 w-5" aria-label="Facebook" />
 						</Link>
 					</div>
 				</div>

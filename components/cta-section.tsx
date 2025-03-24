@@ -12,8 +12,7 @@ export function CTASection() {
 						</h2>
 						<p className="mx-auto max-w-[700px] text-xl text-muted-foreground">
 							Start your journey with our gambling recovery app and become the
-							best version of yourself. The benefits feel great, trust us - The
-							QuitGambling Team
+							best version of yourself.
 						</p>
 						<Button>
 							<Download className="mr-2 h-5 w-5" />
