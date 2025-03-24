@@ -20,7 +20,7 @@ export default async function BlogPage() {
 						href={`/blog/${blog.slug.trim()}`}
 						className="block group"
 					>
-						<div className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+						<div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-border/50">
 							{blog.featured_image?.data && (
 								<div className="relative h-48 w-full">
 									<Image
