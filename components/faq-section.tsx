@@ -75,10 +75,10 @@ export function FAQSection() {
 									Is the app available on both iPhone and Android?
 								</AccordionTrigger>
 								<AccordionContent className="pb-4 text-muted-foreground">
-									Yes, QUITTR is available for both iOS and Android devices. You
-									can download it from the App Store or Google Play Store. The
-									app syncs across all your devices, so you can access your
-									progress anywhere.
+									Yes, QuitGambling is available for both iOS and Android
+									devices. You can download it from the App Store or Google Play
+									Store. The app syncs across all your devices, so you can
+									access your progress anywhere.
 								</AccordionContent>
 							</AccordionItem>
 						</Accordion>
