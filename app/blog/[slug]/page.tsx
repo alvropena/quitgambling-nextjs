@@ -15,7 +15,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
 		return (
 			<div className="container mx-auto max-w-6xl px-4 md:px-6 pt-32 pb-16 min-h-screen">
-				<article className="bg-card rounded-lg shadow-md overflow-hidden border border-border/50 p-6 md:p-8">
+				<article className="max-w-3xl mx-auto">
 					{blog.featured_image?.data && (
 						<div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
 							<Image

@@ -1,6 +1,7 @@
 import { getBlogs } from "@/lib/strapi/api";
 import Link from "next/link";
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default async function BlogPage() {
 	const { data: blogs } = await getBlogs();
@@ -20,7 +21,7 @@ export default async function BlogPage() {
 						href={`/blog/${blog.slug.trim()}`}
 						className="block group"
 					>
-						<div className="bg-card rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-border/50">
+						<Card className="overflow-hidden">
 							{blog.featured_image?.data && (
 								<div className="relative h-48 w-full">
 									<Image
@@ -31,7 +32,7 @@ export default async function BlogPage() {
 									/>
 								</div>
 							)}
-							<div className="p-4">
+							<CardContent className="p-4">
 								<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
 									{blog.title.trim()}
 								</h2>
@@ -45,8 +46,8 @@ export default async function BlogPage() {
 										blog.published_date || blog.createdAt,
 									).toLocaleDateString()}
 								</div>
-							</div>
-						</div>
+							</CardContent>
+						</Card>
 					</Link>
 				))}
 			</div>
