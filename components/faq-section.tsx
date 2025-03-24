@@ -7,7 +7,7 @@ import {
 
 export function FAQSection() {
 	return (
-		<section id="faq" className="w-full py-12 md:py-24 bg-white/50">
+		<section id="faq" className="w-full py-12 md:py-24">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
 				<div className="flex flex-col items-center justify-center space-y-4 text-center">
 					<div className="space-y-2">
@@ -20,7 +20,7 @@ export function FAQSection() {
 					</div>
 				</div>
 				<div className="mx-auto max-w-2xl py-8">
-					<div className="w-full border rounded-lg overflow-hidden bg-card">
+					<div className="w-full border rounded-lg overflow-hidden bg-card/50 backdrop-blur-sm">
 						<Accordion type="single" collapsible className="w-full">
 							<AccordionItem value="item-1" className="px-4 border-b">
 								<AccordionTrigger className="text-lg font-medium hover:text-primary py-4">

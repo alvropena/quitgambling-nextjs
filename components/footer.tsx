@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Instagram, Facebook } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 // Custom social media icon components
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -59,19 +60,28 @@ const InstagramIcon = () => (
 
 export function Footer() {
 	return (
-		<footer className="bg-black text-white pt-16 pb-8">
+		<footer className="w-full pt-16 pb-8 bg-muted/50 dark:bg-muted/10 border-t border-border/10">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
 				<div className="grid grid-cols-1 md:grid-cols-12 gap-8">
 					{/* Contact Column */}
 					<div className="space-y-4 md:col-span-2">
 						<h3 className="font-semibold mb-6">Contact</h3>
-						<Link href="/contact" className="block hover:text-gray-300">
+						<Link
+							href="/contact"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Support
 						</Link>
-						<Link href="/contact" className="block hover:text-gray-300">
+						<Link
+							href="/contact"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Help Center
 						</Link>
-						<Link href="/contact" className="block hover:text-gray-300">
+						<Link
+							href="/contact"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Emergency Help
 						</Link>
 					</div>
@@ -79,16 +89,28 @@ export function Footer() {
 					{/* Resources Column */}
 					<div className="space-y-4 md:col-span-2">
 						<h3 className="font-semibold mb-6">Resources</h3>
-						<Link href="/blog" className="block hover:text-gray-300">
+						<Link
+							href="/blog"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Recovery Blog
 						</Link>
-						<Link href="/stories" className="block hover:text-gray-300">
+						<Link
+							href="/stories"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Success Stories
 						</Link>
-						<Link href="/guides" className="block hover:text-gray-300">
+						<Link
+							href="/guides"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Recovery Guides
 						</Link>
-						<Link href="/about" className="block hover:text-gray-300">
+						<Link
+							href="/about"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							About Us
 						</Link>
 					</div>
@@ -96,13 +118,22 @@ export function Footer() {
 					{/* Features Column */}
 					<div className="space-y-4 md:col-span-2">
 						<h3 className="font-semibold mb-6">Features</h3>
-						<Link href="/#features" className="block hover:text-gray-300">
+						<Link
+							href="/#features"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Blocking Tools
 						</Link>
-						<Link href="/#features" className="block hover:text-gray-300">
+						<Link
+							href="/#features"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Progress Tracking
 						</Link>
-						<Link href="/#features" className="block hover:text-gray-300">
+						<Link
+							href="/#features"
+							className="block text-muted-foreground hover:text-foreground transition-colors"
+						>
 							Community Support
 						</Link>
 					</div>
@@ -110,21 +141,27 @@ export function Footer() {
 					{/* Newsletter Signup */}
 					<div className="space-y-4 md:col-span-4 md:col-start-9">
 						<h3 className="text-lg font-semibold">Stay Updated</h3>
-						<p className="text-sm text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							Get recovery tips and updates straight to your inbox.
 						</p>
 						<Input
 							type="email"
 							placeholder="Enter your email"
-							className="bg-transparent border-white/20"
+							className="bg-background/50 border-border/50"
 						/>
-						<p className="text-sm text-gray-400">
+						<p className="text-sm text-muted-foreground">
 							By signing up, you agree to QuitGambling&apos;s{" "}
-							<Link href="/privacy" className="underline hover:text-white">
+							<Link
+								href="/privacy"
+								className="underline hover:text-foreground transition-colors"
+							>
 								Privacy Policy
 							</Link>{" "}
 							and{" "}
-							<Link href="/terms" className="underline hover:text-white">
+							<Link
+								href="/terms"
+								className="underline hover:text-foreground transition-colors"
+							>
 								Terms of Service
 							</Link>
 						</p>
@@ -132,29 +169,30 @@ export function Footer() {
 				</div>
 
 				{/* Bottom Section */}
-				<div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-white/20">
-					<p className="text-sm text-gray-400">
+				<div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-border/20">
+					<p className="text-sm text-muted-foreground">
 						© {new Date().getFullYear()} QuitGambling LLC
 					</p>
 					<div className="flex items-center gap-4 md:mt-0">
 						<Link
 							href="/privacy"
-							className="text-sm text-gray-400 hover:text-white"
+							className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 						>
 							Privacy Policy
 						</Link>
-						<span className="text-gray-400">|</span>
+						<span className="text-muted-foreground">|</span>
 						<Link
 							href="/terms"
-							className="text-sm text-gray-400 hover:text-white"
+							className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 						>
 							Terms of Service
 						</Link>
 					</div>
-					<div className="flex gap-6 md:mt-0">
+					<div className="flex items-center gap-6 md:mt-0">
+						<ThemeToggle />
 						<Link
 							href="https://instagram.com/quitgambling.app"
-							className="text-gray-400 hover:text-white"
+							className="text-muted-foreground hover:text-foreground transition-colors"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -162,7 +200,7 @@ export function Footer() {
 						</Link>
 						<Link
 							href="https://tiktok.com/@quitgambling.app"
-							className="text-gray-400 hover:text-white"
+							className="text-muted-foreground hover:text-foreground transition-colors"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -170,7 +208,7 @@ export function Footer() {
 						</Link>
 						<Link
 							href="https://facebook.com/quitgambling.app"
-							className="text-gray-400 hover:text-white"
+							className="text-muted-foreground hover:text-foreground transition-colors"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

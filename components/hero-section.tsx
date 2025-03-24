@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { Download } from "lucide-react";
 
 export function HeroSection() {
 	return (
 		<section className="bg-background">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
 				<div className="grid md:grid-cols-2 gap-12 py-24">
-					<div className="flex flex-col justify-center space-y-6">
+					<div className="flex flex-col justify-center space-y-6 text-center md:text-left">
 						<h1 className="text-5xl md:text-6xl font-bold leading-tight">
 							Break Free from Gambling Addiction
 						</h1>
@@ -19,36 +21,11 @@ export function HeroSection() {
 							Endorsed by addiction recovery experts and backed by research
 						</p>
 
-						<div className="flex flex-wrap gap-4 pt-4">
-							<Link
-								href="https://wikipedia.com"
-								className="inline-block"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src="/app-store2.svg"
-									alt="Download on the App Store"
-									width={240}
-									height={80}
-									className="rounded-md"
-								/>
-							</Link>
-
-							<Link
-								href="https://wikipedia.com"
-								className="inline-block"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src="/google-play2.svg"
-									alt="Get it on Google Play"
-									width={240}
-									height={80}
-									className="rounded-md"
-								/>
-							</Link>
+						<div className="pt-4 flex justify-center md:justify-start">
+							<Button size="lg">
+								<Download className="mr-2 h-5 w-5" />
+								Download Now
+							</Button>
 						</div>
 					</div>
 

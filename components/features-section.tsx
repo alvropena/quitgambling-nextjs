@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function FeaturesSection() {
 	return (
-		<section id="features" className="w-full py-12 md:py-24 bg-white/50">
+		<section id="features" className="w-full py-12 md:py-24">
 			<div className="container mx-auto max-w-7xl px-4 md:px-6">
 				<div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
 					<div className="space-y-2">
@@ -32,7 +32,7 @@ export function FeaturesSection() {
 						</div>
 						<div className="w-full md:w-1/2 space-y-4">
 							<h3 className="text-2xl font-bold">Sobriety Tracker</h3>
-							<p className="text-gray-700 text-lg">
+							<p className="text-muted-foreground text-lg">
 								Track your gambling-free days and celebrate milestones. Our
 								intuitive tracker helps you stay motivated and focused on your
 								recovery journey.
@@ -54,7 +54,7 @@ export function FeaturesSection() {
 						</div>
 						<div className="w-full md:w-1/2 space-y-4">
 							<h3 className="text-2xl font-bold">Trigger Analysis</h3>
-							<p className="text-gray-700 text-lg">
+							<p className="text-muted-foreground text-lg">
 								Identify and understand your gambling triggers with our advanced
 								analysis tools. Get insights into patterns and develop better
 								coping strategies.
@@ -76,7 +76,7 @@ export function FeaturesSection() {
 						</div>
 						<div className="w-full md:w-1/2 space-y-4">
 							<h3 className="text-2xl font-bold">Blocking Tools</h3>
-							<p className="text-gray-700 text-lg">
+							<p className="text-muted-foreground text-lg">
 								Protect yourself with powerful blocking tools that prevent
 								access to gambling sites and apps. Stay safe and focused on your
 								recovery.
@@ -98,7 +98,7 @@ export function FeaturesSection() {
 						</div>
 						<div className="w-full md:w-1/2 space-y-4">
 							<h3 className="text-2xl font-bold">Goal Setting</h3>
-							<p className="text-gray-700 text-lg">
+							<p className="text-muted-foreground text-lg">
 								Set and track personal recovery goals. Our goal-setting features
 								help you stay accountable and celebrate your progress along the
 								way.

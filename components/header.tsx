@@ -12,7 +12,7 @@ import {
 export function Header() {
 	return (
 		<header className="fixed top-0 w-full z-50 flex justify-center px-4 py-4">
-			<div className="container max-w-5xl bg-white/80 backdrop-blur-md rounded-full border px-6">
+			<div className="container max-w-5xl bg-background/60 dark:bg-background/40 backdrop-blur-xl border-2 border-white/[0.15] dark:border-white/[0.1] shadow-[0_0_15px_rgba(0,0,0,0.1)] dark:shadow-[0_0_15px_rgba(255,255,255,0.1)] rounded-full px-6">
 				<nav className="flex items-center justify-between h-16">
 					<Link href="/" className="font-bold text-xl flex items-center gap-2">
 						<Ban className="h-6 w-6" />
@@ -21,6 +21,12 @@ export function Header() {
 
 					{/* Desktop Navigation - Hidden on Mobile */}
 					<div className="hidden md:flex space-x-6">
+						<Link
+							href="/pricing"
+							className="text-muted-foreground hover:text-foreground"
+						>
+							Pricing
+						</Link>
 						<Link
 							href="/#features"
 							className="text-muted-foreground hover:text-foreground"
@@ -42,7 +48,7 @@ export function Header() {
 					</div>
 
 					<div className="flex items-center space-x-4">
-						<Button>
+						<Button className="hidden md:flex">
 							<Download className="mr-2 h-4 w-4" />
 							Download
 						</Button>
@@ -51,15 +57,19 @@ export function Header() {
 						<div className="md:hidden">
 							<Sheet>
 								<SheetTrigger asChild>
-									<Button variant="ghost" size="icon">
-										<Menu className="h-6 w-6" />
-									</Button>
+									<Menu className="h-6 w-6" />
 								</SheetTrigger>
 								<SheetContent>
 									<SheetHeader>
 										<SheetTitle>Menu</SheetTitle>
 									</SheetHeader>
 									<div className="flex flex-col space-y-4 mt-6">
+										<Link
+											href="/pricing"
+											className="text-lg font-medium text-muted-foreground hover:text-foreground"
+										>
+											Pricing
+										</Link>
 										<Link
 											href="/#features"
 											className="text-lg font-medium text-muted-foreground hover:text-foreground"
@@ -78,6 +88,12 @@ export function Header() {
 										>
 											Blog
 										</Link>
+									</div>
+									<div className="absolute bottom-6 left-6 right-6">
+										<Button className="w-full">
+											<Download className="mr-2 h-5 w-5" />
+											Download
+										</Button>
 									</div>
 								</SheetContent>
 							</Sheet>
