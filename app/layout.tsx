@@ -9,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "QuitGambling",
+	title: "QuitGambling - Stop Gambling Today",
 	description:
 		"QuitGambling helps you overcome gambling addiction with powerful tools and support.",
 };
