@@ -8,6 +8,7 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image";
 
 export function Header() {
 	return (
@@ -15,7 +16,13 @@ export function Header() {
 			<div className="container max-w-5xl bg-background/60 dark:bg-background/40 backdrop-blur-xl border-2 border-white/[0.15] dark:border-white/[0.1] shadow-[0_0_15px_rgba(0,0,0,0.1)] dark:shadow-[0_0_15px_rgba(255,255,255,0.1)] rounded-full px-6">
 				<nav className="flex items-center justify-between h-16">
 					<Link href="/" className="font-bold text-xl flex items-center gap-2">
-						<Ban className="h-6 w-6" />
+						<Image
+							src="/icon.svg"
+							alt="QuitGambling Logo"
+							width={24}
+							height={24}
+							className="dark:invert"
+						/>
 						QuitGambling
 					</Link>
 
