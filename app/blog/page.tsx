@@ -43,7 +43,7 @@ export default async function BlogPage() {
 							href={`/blog/${blog.slug.trim()}`}
 							className="block group"
 						>
-							<Card className="overflow-hidden">
+							<Card className="overflow-hidden h-[200px] flex flex-col">
 								{blog.featured_image?.data && (
 									<div className="relative h-48 w-full">
 										<Image
@@ -54,16 +54,16 @@ export default async function BlogPage() {
 										/>
 									</div>
 								)}
-								<CardContent className="p-4">
-									<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+								<CardContent className="p-4 flex flex-col flex-1">
+									<h2 className="text-xl font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
 										{blog.title.trim()}
 									</h2>
 									{blog.description && (
-										<p className="text-muted-foreground mb-4">
+										<p className="text-muted-foreground mb-4 line-clamp-3">
 											{blog.description}
 										</p>
 									)}
-									<div className="flex items-center justify-between">
+									<div className="flex items-center justify-between mt-auto">
 										<div className="text-sm text-muted-foreground">
 											{blogDate.toLocaleDateString()}
 										</div>
