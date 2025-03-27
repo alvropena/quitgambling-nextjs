@@ -55,11 +55,7 @@ export default async function BlogPage() {
 									</div>
 								)}
 								<CardContent className="p-4">
-									{isNewPost && (
-										<Badge variant="secondary" className="mb-2">
-											New
-										</Badge>
-									)}
+									{isNewPost && <Badge className="mb-2">New</Badge>}
 									<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
 										{blog.title.trim()}
 									</h2>
