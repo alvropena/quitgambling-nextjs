@@ -54,16 +54,14 @@ export default async function BlogPage() {
 									</div>
 								)}
 								<CardContent className="p-4">
-									<div className="flex items-center gap-2 mb-2">
-										<h2 className="text-xl font-semibold group-hover:text-primary transition-colors">
-											{blog.title.trim()}
-										</h2>
-										{isNewPost && (
-											<span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-												New
-											</span>
-										)}
-									</div>
+									{isNewPost && (
+										<span className="inline-block text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full mb-2">
+											New
+										</span>
+									)}
+									<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+										{blog.title.trim()}
+									</h2>
 									{blog.description && (
 										<p className="text-muted-foreground mb-4">
 											{blog.description}
