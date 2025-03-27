@@ -55,11 +55,6 @@ export default async function BlogPage() {
 									</div>
 								)}
 								<CardContent className="p-4">
-									{isNewPost && (
-										<div className="flex justify-center mb-2">
-											<Badge>New</Badge>
-										</div>
-									)}
 									<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
 										{blog.title.trim()}
 									</h2>
@@ -68,8 +63,11 @@ export default async function BlogPage() {
 											{blog.description}
 										</p>
 									)}
-									<div className="text-sm text-muted-foreground">
-										{blogDate.toLocaleDateString()}
+									<div className="flex items-center justify-between">
+										<div className="text-sm text-muted-foreground">
+											{blogDate.toLocaleDateString()}
+										</div>
+										{isNewPost && <Badge>New</Badge>}
 									</div>
 								</CardContent>
 							</Card>
