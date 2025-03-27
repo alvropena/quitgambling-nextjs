@@ -2,6 +2,7 @@ import { getBlogs } from "@/lib/strapi/api";
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default async function BlogPage() {
 	const { data: blogs } = await getBlogs();
@@ -55,9 +56,9 @@ export default async function BlogPage() {
 								)}
 								<CardContent className="p-4">
 									{isNewPost && (
-										<span className="inline-block text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full mb-2">
+										<Badge variant="secondary" className="mb-2">
 											New
-										</span>
+										</Badge>
 									)}
 									<h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
 										{blog.title.trim()}
